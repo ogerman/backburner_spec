@@ -131,5 +131,11 @@ describe BackburnerSpec do
     end
   end
 
+  describe "bugs" do
+    it "does not pollute Object" do
+      expect { Object.new.constantize}.to raise_error(NoMethodError)
+    end
+  end
+
 
 end
